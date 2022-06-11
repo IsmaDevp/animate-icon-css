@@ -1,0 +1,43 @@
+.container{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+
+.coin{
+    background: rgb(129, 173, 239);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 20%;
+    animation: jump 0.8s infinite;
+}
+
+.coin::before{
+    content: '';
+    display: inline-block;
+    background: rgb(56, 131, 241);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 20%;
+    left: -6px;
+    top: -2px;
+}
+
+.coin::after{
+    content: '';
+    display: inline-block;
+    background-image: url("http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: 90px 90px;
+    background-repeat: no-repeat;
+    top: 2px;
+}
+
+@keyframes jump {
+    0%, 100% {top: 0;}
+    30% {top: -25px;}
+}
